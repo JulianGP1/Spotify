@@ -16,34 +16,107 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="h-16 bg-black flex items-center" id="head">
-			<img class="h-[40px] w-[150px] ml-5 hover:cursor-pointer"
+	<body class="bg-black">
+		
+		<div class="h-16 w-screen top-0 fixed bg-black flex items-center   " id="head">
+			<img
+				class="h-[40px] w-[150px] ml-5 hover:cursor-pointer"
 				src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png"
 				alt=""/>
 
-	        <div class="w-[40px] h-[40px] ml-auto mr-4 rounded-full bg-slate-400 ">
-				<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"  class="size-6 w-8 h-8 ml-1 hover:cursor-pointer">
-					<path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-					<path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-				  </svg>
+			<div class="w-[40px] h-[40px] ml-auto mr-4 rounded-full bg-gray-900">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="size-6 w-8 h-8 ml-1 hover:cursor-pointer"
+				>
+					<path
+						d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+					></path>
+					<path
+						d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+					></path>
+				</svg>
 			</div>
-			<div class="w-[430px] h-[40px] bg-slate-400 mr-auto rounded-full flex" >
-				<svg class="h-8 mt-1 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-					<path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-				  </svg>
-				  <input class="bg-slate-400 placeholder:text-gray-300" type="text" name="" id="" placeholder="¿Qué quieres reproducir?">
+
+			<div id="buscador"
+				class="w-[430px] h-[40px] bg-gray-900 mr-auto rounded-full flex"
+			>
+				<svg
+					class="h-8 mt-1 ml-1"
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
+					stroke="currentColor"
+					className="size-6"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+					></path>
+				</svg>
+				<input
+					class="bg-gray-900 placeholder:text-gray-300"
+					type="text"
+					name=""
+					id=""
+					placeholder="¿Qué quieres reproducir?"
+				/>
 			</div>
 
+			<div class="relative group">
+				<a href="#" class="mr-7 font-bold text-[18px] text-gray-300">Registrarse</a>
+				<div class="absolute left-0 mt-[20px] w-40 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+					<a href="#" class="block text-white text-lg py-2 px-4 hover:bg-gray-700">Crear usuario</a>
+				</div>
+			</div>
 
-
-			<a href="" class=" mr-7 font-bold text-[18px] text-gray-300">Registrarse</a>
-			<div class="mr-6 h-[45px] text-[18px] bg-white rounded-3xl flex items-center justify-center w-[170px]">
+			<div
+				class="mr-6 h-[45px] text-[18px] bg-white rounded-3xl flex items-center justify-center w-[170px]"
+			>
 				<a href="" class="text-black font-bold">Iniciar Sesión</a>
 			</div>
 		</div>
-		<a href="">camiiiiii
+	
+		<div id="contein" class="bg-black  mt-20">
+			<div class="h-80 w-1/4  rounded-xl bg-gray-700  bg-opacity-70  " id="conteiner">
+			
+				<div class="flex">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="size-6 ml-6 text-gray-500 mt"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+						></path>
+					</svg>
+					<a href="" class="ml-6 text-gray-500 font-bold">Tu biblioteca  </a>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-[50px] h-[30px] ml-auto mr-6 text-gray-500">
+						<path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+					  </svg>
+					  
 
-		</a>
+					  
+				</div>
+				<div class="h-auto bg-cyan-500 flex-col mt-6 ml-3 mr-3 rounded-2xl">
+					<h3 class="text-white ml-6 mt-2">Crea tu primera lista</h3>
+					<br>
+					<h5 class="text-white mt-2">es muy facil,y te echaremos una mano</h5>
+					<div class="mr-6 h-[45px] text-[18px] bg-white rounded-3xl flex items-center justify-center w-[170px]">
+				     <a href="" class="text-black font-bold">Crear lista</a>
+			        </div>
+				</div>
+				
+			</div>
+		</div>
 	</body>
 </html>
