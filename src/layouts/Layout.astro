@@ -18,11 +18,10 @@ const { title } = Astro.props;
 	</head>
 	<body class="bg-black">
 		
-		<div class="h-16 w-screen top-0 fixed bg-black flex items-center   " id="head">
-			<img
-				class="h-[40px] w-[150px] ml-5 hover:cursor-pointer"
-				src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png"
-				alt=""/>
+		<div id="head" class="h-16 w-screen top-0 fixed bg-black flex items-center   " >
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-[40px] w-[40px] ml-4 text-white" viewBox="0 0 24 24">
+				<path fill="currentColor" d="M17.9 10.9C14.7 9 9.35 8.8 6.3 9.75c-.5.15-1-.15-1.15-.6c-.15-.5.15-1 .6-1.15c3.55-1.05 9.4-.85 13.1 1.35c.45.25.6.85.35 1.3c-.25.35-.85.5-1.3.25m-.1 2.8c-.25.35-.7.5-1.05.25c-2.7-1.65-6.8-2.15-9.95-1.15c-.4.1-.85-.1-.95-.5s.1-.85.5-.95c3.65-1.1 8.15-.55 11.25 1.35c.3.15.45.65.2 1m-1.2 2.75c-.2.3-.55.4-.85.2c-2.35-1.45-5.3-1.75-8.8-.95c-.35.1-.65-.15-.75-.45c-.1-.35.15-.65.45-.75c3.8-.85 7.1-.5 9.7 1.1c.35.15.4.55.25.85M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2" />
+			</svg>
 
 			<div class="w-[40px] h-[40px] ml-auto mr-4 rounded-full bg-gray-900">
 				<svg
@@ -81,41 +80,65 @@ const { title } = Astro.props;
 			</div>
 		</div>
 	
-		<div id="contein" class="bg-black  mt-20">
-			<div class="h-80 w-1/4  rounded-xl bg-gray-700  bg-opacity-70  " id="conteiner">
+		<div id="contein" class="bg-black  mt-20 grid-cols-2">
+			<div  id="tarjeta izquierda" class="fixed h-auto w-1/4  rounded-xl bg-zinc-900 bg-opacity-40  ml-2  ">
 			
-				<div class="flex">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="size-6 ml-6 text-gray-500 mt"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-						></path>
-					</svg>
+				<div class="flex h-auto w-auto">
+					<div class="flex mt-3 h-auto w-auto"> 
+						<svg id="img biblioteca" xmlns="http://www.w3.org/2000/svg" class="h-[25px] w-25px ml-3 text-gray-600" viewBox="0 0 24 24">
+							<g fill="none" stroke="currentColor" stroke-width="1.5">
+								<path d="M19.562 7a2.132 2.132 0 0 0-2.1-2.5H6.538a2.132 2.132 0 0 0-2.1 2.5M17.5 4.5c.028-.26.043-.389.043-.496a2 2 0 0 0-1.787-1.993C15.65 2 15.52 2 15.26 2H8.74c-.26 0-.391 0-.497.011a2 2 0 0 0-1.787 1.993c0 .107.014.237.043.496" />
+								<path stroke-linecap="round" d="M15 18H9" />
+								<path d="M2.384 13.793c-.447-3.164-.67-4.745.278-5.77C3.61 7 5.298 7 8.672 7h6.656c3.374 0 5.062 0 6.01 1.024s.724 2.605.278 5.769l-.422 3c-.35 2.48-.525 3.721-1.422 4.464s-2.22.743-4.867.743h-5.81c-2.646 0-3.97 0-4.867-.743s-1.072-1.983-1.422-4.464z" />
+							</g>
+						</svg>
 					<a href="" class="ml-6 text-gray-500 font-bold">Tu biblioteca  </a>
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-[50px] h-[30px] ml-auto mr-6 text-gray-500">
+					<svg id="img +" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-[50px] h-[30px] text-gray-500 ml-28">
 						<path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 					  </svg>
 					  
-
+					</div>
 					  
 				</div>
-				<div class="h-auto bg-cyan-500 flex-col mt-6 ml-3 mr-3 rounded-2xl">
-					<h3 class="text-white ml-6 mt-2">Crea tu primera lista</h3>
-					<br>
-					<h5 class="text-white mt-2">es muy facil,y te echaremos una mano</h5>
-					<div class="mr-6 h-[45px] text-[18px] bg-white rounded-3xl flex items-center justify-center w-[170px]">
-				     <a href="" class="text-black font-bold">Crear lista</a>
+				<div id="tarjeta gris" class="h-[150px] bg-zinc-800 bg-opacity-40 flex-col mt-6 ml-3 mr-3 rounded-2xl">
+					
+					<h3 class="text-white ml-6 pt-3 ">Crea tu primera lista</h3>
+					
+					<h5 class="text-white mt-2 ml-6">es muy facil,y te echaremos una mano</h5>
+					<div id="boton" class="mt-4 flex items-center justify-center  ">
+					<div class="center h-[45px] text-[18px] bg-white rounded-3xl flex items-center justify-center w-[170px]">
+				    <h2 class="text-black font-bold"> Crar lista</h2>
 			        </div>
+				    </div>
+					
+				</div>
+
+
+				<div id="info" class="mt-3 ml-4 text-[12px] grid grid-cols-2 gap-2 ">
+					<a href="" class="text-gray-500 font-bold">Legal</a>	
+					<a href="" class="text-gray-500 font-bold">Seguridad y Centro de Privacidad</a>	
+					<a href="" class="text-gray-500 font-bold">Política de Privacidad</a>	
+					<a href="" class="text-gray-500 font-bold">Cookies</a>
+					<a href="" class="text-gray-500 font-bold">Sobre los anuncios</a>
+					<a href="" class="text-gray-500 font-bold">Accesibilidad</a>	
+					<a href="" class="text-white font-bold text-[15px]">Cookies</a>	
+			    </div>
+
+				<div id="boton lenguaje" class="pb-8 " >
+				<div  class="border-inherit justify-center mt-8 pb  ml-[60px] mr-[60px] align-middle flex   border-solid border-2 border-sky-500  rounded-2xl	">
+					<svg xmlns="http://www.w3.org/2000/svg" class="text-white w-[25px] ml" viewBox="0 0 36 36">
+						<path fill="currentColor" d="M26.54 18a19.4 19.4 0 0 0-.43-4h3.6a12 12 0 0 0-.67-1.6h-3.35a19.7 19.7 0 0 0-2.89-5.87a12.3 12.3 0 0 0-2.55-.76a17.8 17.8 0 0 1 3.89 6.59h-5.39V5.6h-1.5v6.77h-5.39a17.8 17.8 0 0 1 3.9-6.6a12.3 12.3 0 0 0-2.54.75a19.7 19.7 0 0 0-2.91 5.85H6.94A12 12 0 0 0 6.26 14h3.63a19.4 19.4 0 0 0-.43 4a19.7 19.7 0 0 0 .5 4.37H6.42A12 12 0 0 0 7.16 24h3.23a19.3 19.3 0 0 0 2.69 5.36a12.3 12.3 0 0 0 2.61.79A17.9 17.9 0 0 1 12 24h5.26v6.34h1.5V24H24a17.9 17.9 0 0 1-3.7 6.15a12.3 12.3 0 0 0 2.62-.81A19.3 19.3 0 0 0 25.61 24h3.2a12 12 0 0 0 .74-1.6H26a19.7 19.7 0 0 0 .54-4.4m-9.29 4.37h-5.74a17.7 17.7 0 0 1-.09-8.4h5.83Zm7.24 0h-5.74V14h5.83a18.2 18.2 0 0 1 .42 4a18 18 0 0 1-.51 4.37" class="clr-i-outline clr-i-outline-path-1" />
+						<path fill="currentColor" d="M18 2a16 16 0 1 0 16 16A16 16 0 0 0 18 2m0 30a14 14 0 1 1 14-14a14 14 0 0 1-14 14" class="clr-i-outline clr-i-outline-path-2" />
+						<path fill="none" d="M0 0h36v36H0z" />
+					</svg>
+					<a href="" class="text-white font-bold ml-2  ">Español latinoamérica</a>
+				</div>
 				</div>
 				
+				
+			</div>
+			<div id="Page principal" class="h-screen   bg-yellow-900 ml-[350px]">
+
 			</div>
 		</div>
 	</body>
